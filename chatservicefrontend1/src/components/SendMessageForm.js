@@ -23,7 +23,7 @@ const SendMessageForm = ({ sendMessage }) => {
       </CCol>
       <CCol xs='auto'>
         <CButton color='primary' type='submit' className='mb-3' size='lg'>
-          Send
+          Join
         </CButton>
       </CCol>
     </CForm>

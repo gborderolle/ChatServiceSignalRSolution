@@ -6,29 +6,52 @@ import ChatRoom from './components/ChatRoom';
 
 import './App.css';
 
-function App() {
+function AppNew() {
   const [connection, setConnection] = useState(null);
   const [messages, setMessages] = useState([]);
 
-  const joinChatRoom = async (username, chatroom) => {
-    try {
-      const conn = new HubConnectionBuilder()
+  useEffect(() => {
+    const establishConnection = async () => {
+      const newConnection = new HubConnectionBuilder()
         .withUrl('http://localhost:5230/chat')
         .configureLogging(LogLevel.Information)
         .build();
 
-      conn.on('JoinSpecificChatRoom', (username, message) => {
+      newConnection.on('JoinSpecificChatRoom', (username, message) => {
         console.log(username + ' ' + message);
       });
 
-      conn.on('ReceiveSpecificMessage', (username, message) => {
+      newConnection.on('ReceiveSpecificMessage', (username, message) => {
         setMessages((messages) => [...messages, { username, message }]);
       });
 
-      await conn.start();
-      await conn.invoke('JoinSpecificChatRoom', { username, chatroom });
+      newConnection.onclose(async () => {
+        console.log('Connection lost, attempting to reconnect...');
+        await startConnection(newConnection);
+      });
 
-      setConnection(conn);
+      await startConnection(newConnection);
+    };
+
+    establishConnection();
+  }, []);
+
+  const startConnection = async (newConnection) => {
+    try {
+      await newConnection.start();
+      console.log('Connected!');
+      setConnection(newConnection);
+    } catch (error) {
+      console.error('Connection failed: ', error);
+      setTimeout(() => startConnection(newConnection), 5000); // Intentar reconectar después de un retraso
+    }
+  };
+
+  const joinChatRoom = async (username, chatroom) => {
+    try {
+      if (connection && connection.state === HubConnectionState.Connected) {
+        await connection.invoke('JoinSpecificChatRoom', { username, chatroom });
+      }
     } catch (error) {
       console.error(error);
     }
@@ -60,4 +83,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppNew;

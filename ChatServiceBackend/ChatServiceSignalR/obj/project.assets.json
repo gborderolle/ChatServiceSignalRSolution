@@ -297,11 +297,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\GitHub\\NET_tutorials\\ChatServiceSignalRSolution\\ChatServiceBackend\\ChatServiceSignalR\\ChatServiceSignalR.csproj",
+      "projectUniqueName": "d:\\Documents\\GitHub\\NET_tutorials\\ChatServiceSignalRSolution\\ChatServiceBackend\\ChatServiceSignalR\\ChatServiceSignalR.csproj",
       "projectName": "ChatServiceSignalR",
-      "projectPath": "D:\\Documents\\GitHub\\NET_tutorials\\ChatServiceSignalRSolution\\ChatServiceBackend\\ChatServiceSignalR\\ChatServiceSignalR.csproj",
+      "projectPath": "d:\\Documents\\GitHub\\NET_tutorials\\ChatServiceSignalRSolution\\ChatServiceBackend\\ChatServiceSignalR\\ChatServiceSignalR.csproj",
       "packagesPath": "C:\\Users\\Gonzalo\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\GitHub\\NET_tutorials\\ChatServiceSignalRSolution\\ChatServiceBackend\\ChatServiceSignalR\\obj\\",
+      "outputPath": "d:\\Documents\\GitHub\\NET_tutorials\\ChatServiceSignalRSolution\\ChatServiceBackend\\ChatServiceSignalR\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
