@@ -7,3 +7,27 @@ ChatServiceBackend/ChatServiceSignalR/bin/
 ChatServiceBackend/ChatServiceSignalR/bin/*
 ChatServiceBackend/ChatServiceSignalR/obj/
 ChatServiceBackend/ChatServiceSignalR/obj/*
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+chatservicefrontend1/node_modules
+chatservicefrontend1/.pnp
+chatservicefrontend1/.pnp.js
+
+# testing
+chatservicefrontend1/coverage
+
+# production
+chatservicefrontend1/build
+
+# misc
+chatservicefrontend1/.DS_Store
+chatservicefrontend1/.env.local
+chatservicefrontend1/.env.development.local
+chatservicefrontend1/.env.test.local
+chatservicefrontend1/.env.production.local
+
+chatservicefrontend1/npm-debug.log*
+chatservicefrontend1/yarn-debug.log*
+chatservicefrontend1/yarn-error.log*
