@@ -7,7 +7,9 @@ const MessageContainer = ({ messages }) => {
       <CCol xs='auto'>
         {messages.map((message, index) => (
           <div key={index}>
-            <p>{message.text}</p>
+            <p>
+              {message.message} - {message.username}
+            </p>
           </div>
         ))}
       </CCol>
