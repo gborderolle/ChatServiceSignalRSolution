@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yjn29Q+i1/DclnODLg/QQEPl66uDimvSOuJ2bJBhEvIs8vPtr+IHmLi+Ah52A7e+5wRty104L6QlaVv5eoMRiw==",
+  "dgSpecHash": "pM3r1rdJ7qcKJJ+o1EA2sL2OfS/32Rmcr6/aBmNqEFgHueD9tAjVw6RnoeauVJIOaiaXyaTTtSm+WXBXaCyaoQ==",
   "success": true,
-  "projectFilePath": "d:\\Documents\\GitHub\\NET_tutorials\\ChatServiceSignalRSolution\\ChatServiceBackend\\ChatServiceSignalR\\ChatServiceSignalR.csproj",
+  "projectFilePath": "D:\\Documents\\GitHub\\NET_tutorials\\ChatServiceSignalRSolution\\ChatServiceBackend\\ChatServiceSignalR\\ChatServiceSignalR.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gonzalo\\.nuget\\packages\\jquery\\1.6.4\\jquery.1.6.4.nupkg.sha512",
     "C:\\Users\\Gonzalo\\.nuget\\packages\\microsoft.aspnet.signalr\\2.4.3\\microsoft.aspnet.signalr.2.4.3.nupkg.sha512",

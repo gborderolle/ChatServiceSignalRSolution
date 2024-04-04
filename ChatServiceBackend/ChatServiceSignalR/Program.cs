@@ -11,7 +11,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("reactApp", builder =>
     {
         builder
-            .WithOrigins("http://localhost:3000/chat")
+            // .WithOrigins("http://localhost:3000/chat")
+            .WithOrigins("http://localhost:3000")
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials();
@@ -28,7 +29,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapHub<ChatHub>("/Chat");
+app.MapHub<ChatHub>("/chat");
 
 app.UseCors("reactApp");
 
