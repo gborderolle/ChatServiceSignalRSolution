@@ -21,14 +21,17 @@ public class ChatHub : Hub
     public async Task JoinSpecificChatRoom(UserConnection userConnection)
     {
         await Groups.AddToGroupAsync(Context.ConnectionId, userConnection.ChatRoom);
+
+        _sharedDb.connections[Context.ConnectionId] = userConnection;
+
         await Clients.Group(userConnection.ChatRoom).SendAsync("ReceivedMessage", "Admin", $"{userConnection.Username} has joined the chat room");
     }
 
     public async Task SendMessage(string message)
     {
-        if(_sharedDb.UserConnectionMap.TryGetValue(Context.ConnectionId, out var username))
+        if (_sharedDb.connections.TryGetValue(Context.ConnectionId, out UserConnection userConnection))
         {
-            await Clients.All.SendAsync("ReceivedMessage", username, message);
+            await Clients.Group(userConnection.ChatRoom).SendAsync("ReceiveSpecificMessage", userConnection.Username, message);
         }
     }
 

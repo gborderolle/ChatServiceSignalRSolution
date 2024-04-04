@@ -4,12 +4,12 @@ import SendMessageForm from './SendMessageForm';
 
 const ChatRoom = ({ messages, sendMessage }) => {
   <div>
-    <Row class='px-5 my-5'>
+    <Row className='px-5 my-5'>
       <Col sm='10'>
         <h2>Chat Room</h2>
       </Col>
     </Row>
-    <Row class='px-5 my-5'>
+    <Row className='px-5 my-5'>
       <Col sm='12'>
         <MessageContainer messages={messages} />
       </Col>

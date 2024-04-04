@@ -1,0 +1,7 @@
+ChatServiceBackend/.vs/*
+ChatServiceBackend/.vs/
+ChatServiceBackend/ChatServiceSignalR/obj/
+ChatServiceBackend/ChatServiceSignalR/obj/*
+ChatServiceBackend/ChatServiceSignalR/bin/
+ChatServiceBackend/ChatServiceSignalR/bin/*
+ChatServiceFrontend/node_modules/

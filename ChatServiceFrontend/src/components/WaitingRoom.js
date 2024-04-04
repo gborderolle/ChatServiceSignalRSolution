@@ -41,8 +41,8 @@ const WaitingRoom = ({ joinChatRoom }) => {
             </Col>
           </Row>
           <div className='d-grid gap-2'>
-            <Button variant='primary' type='submit' size='lg'>
-              Join Chatroom
+            <Button variant='success' type='submit' size='lg'>
+              Join
             </Button>
           </div>
         </Form>
